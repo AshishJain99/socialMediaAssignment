@@ -58,7 +58,19 @@ class headerView: UIView {
         
     }
     
+    func setupGesture(){
+        let cameraTap = UITapGestureRecognizer(target: self, action: #selector(cameraTapped))
+        cameraButtonView.addGestureRecognizer(cameraTap)
+    }
     
     
+}
+
+extension headerView{
+    
+    @objc func cameraTapped(){
+        print("Camera tapped")
+        
+    }
     
 }
